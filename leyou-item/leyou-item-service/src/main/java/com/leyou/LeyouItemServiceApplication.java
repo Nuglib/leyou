@@ -13,7 +13,7 @@ import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
  */
 @SpringBootApplication
 @EnableDiscoveryClient
-@MapperScan("com.item.mapper")
+@MapperScan("com.leyou.item.mapper")
 public class LeyouItemServiceApplication {
     public static void main(String[] args) {
         SpringApplication.run(LeyouItemServiceApplication.class,args);
