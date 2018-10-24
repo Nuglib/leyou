@@ -11,7 +11,10 @@ eureka:
 zuul:
   prefix: /api
   routes:
-    item-service: /item/**   #商品微服务的影射路径
+    item-service: /item/**   #商品微服务的映射路径
+    upload-service: /upload/** #图片上传服务的映射路径
+  ignored-services:
+    - upload-service   #忽略upload-service服务。
 hystrix:
   command:
     default:
