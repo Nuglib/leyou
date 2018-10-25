@@ -7,7 +7,7 @@ import javax.persistence.Table;
 
 /**
  * @Author:jesse
- * @Description:
+ * @Description: 类别实体类
  * @Date:Create in 9:05 2018/10/21
  * @Modified By:
  */

@@ -5,6 +5,7 @@ import com.leyou.item.pojo.Category;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -37,5 +38,19 @@ public class CategoryService {
         * @Date: 20:28 2018/10/23
         */
         return this.categoryMapper.queryCategoryByBrandid(bid);
+    }
+
+    /**
+     * 根据分类id集合查询所对应的所有分类信息
+     * @param ids
+     * @return
+     */
+    public List<String> queryCategoryNameByIds(List<Long> ids) {
+        List<Category> categoryList = categoryMapper.selectByIdList(ids);
+        List<String> names = new ArrayList<>();
+        for (Category category : categoryList) {
+            names.add(category.getName());
+        }
+        return names;
     }
 }
